@@ -6,8 +6,10 @@ import SpecialistForm from "../components/forms/specialistForm";
 import { patientDto } from "../types/interface";
 import ImageModel from "../components/patients/imageModel.jsx";
 import { usePrint } from "../utils/print";
-import { BackIcon } from "../../public/images/BackIcon.js";
+import { BackIcon } from "../utils/Icons/BackIcon.tsx";
+
 const title = "Specialist";
+
 const SpecialistPatientDetailPage = () => {
   const navigate = useNavigate();
   const goBack = () => navigate(-1);

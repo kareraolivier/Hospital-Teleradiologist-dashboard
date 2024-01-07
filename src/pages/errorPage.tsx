@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import ErrorImage from "../../public/images/errorImage";
+import ErrorImage from "../utils/Icons/errorImage";
 
 export default function ErrorPage() {
   const navigate = useNavigate();

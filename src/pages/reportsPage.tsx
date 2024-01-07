@@ -14,7 +14,7 @@ export default function ReportsPage() {
 
   const getPatient = (keyword = "", page = 1) => {
     getRadiologyPatient(keyword, page).then((res) => {
-      setPatients(res);
+      setPatients(res.data);
       setTotalPages(res.totalPages);
     });
   };
@@ -38,8 +38,8 @@ export default function ReportsPage() {
 
   return (
     <div className="mt-4">
-      <div className="mb-5 flex justify-between font-medium text-gray-700 md:pr-20">
-        <p className="text-2xl">List of patients</p>
+      <div className="mb-5 flex items-center justify-between font-medium text-gray-700 md:pr-20">
+        <p className="text-2xl">Patients</p>
         <input
           type="text"
           name="search"

@@ -10,13 +10,12 @@ export default function SettingsPage() {
 
   const fetchUsers = () => {
     getUsers().then((res) => {
-      setUsers(res.reverse());
+      setUsers(res);
     });
   };
   useEffect(() => {
     fetchUsers();
   }, []);
-  console.log(users);
   return (
     <div className="mt-4">
       <div className="mb-5 flex justify-between font-medium text-gray-700 md:pr-20">

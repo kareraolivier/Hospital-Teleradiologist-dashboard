@@ -88,7 +88,7 @@ const SpecialistForm = ({
           />
         </div>
         <button type="button" onClick={submitForm} className={style.button}>
-          Add patient
+          Add comment
         </button>
       </form>
     </div>

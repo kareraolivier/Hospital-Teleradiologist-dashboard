@@ -1,20 +1,17 @@
 [
   {
     "key": 1,
-    "title": "Radiologist",
-    "content": "Manage user information",
-    "link": "/radiologist"
+    "title": "pending",
+    "percentage": 0
   },
   {
     "key": 2,
-    "title": "Specialist",
-    "content": "Manage user information",
-    "link": "/specialist"
+    "title": "progress",
+    "percentage": 0
   },
   {
     "key": 3,
-    "title": "Patient",
-    "content": "Manage user information",
-    "link": "/reports"
+    "title": "completed",
+    "percentage": 0
   }
 ]

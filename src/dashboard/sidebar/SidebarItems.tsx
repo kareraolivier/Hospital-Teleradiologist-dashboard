@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { data } from "./data";
 import { useAuth } from "../../middleware/Contexts";
-import { Logout } from "../../../public/images/Logout";
+import { Logout } from "../../utils/Icons/Logout";
 
 const style = {
   title: "font-normal mx-4 text-sm",

@@ -39,3 +39,10 @@ export interface userDto {
   role: Role;
   createdAt?: string;
 }
+export interface patientCount {
+  all: number;
+  pending: number;
+  progress: number;
+  completed: number;
+  [key: string]: number;
+}

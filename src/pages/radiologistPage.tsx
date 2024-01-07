@@ -16,7 +16,7 @@ export default function RadiologistPage() {
 
   const getPatient = (keyword = "", page = 1) => {
     getRadiologyPatient(keyword, page).then((res) => {
-      setPatients(res);
+      setPatients(res.data);
       setTotalPages(res.totalPages);
     });
   };

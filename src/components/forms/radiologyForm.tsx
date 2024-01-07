@@ -87,6 +87,7 @@ const RadiologyForm = ({
           type: "success",
         });
         onGetPatient();
+        setIsOpen((prev) => !prev);
         return res;
       })
       .catch((error) => {
@@ -106,7 +107,6 @@ const RadiologyForm = ({
           desc: "",
           comment: "",
         });
-        setIsOpen((prev) => !prev);
       });
   };
   const style = {

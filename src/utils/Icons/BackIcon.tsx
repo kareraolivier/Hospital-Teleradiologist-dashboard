@@ -28,7 +28,7 @@ export const BackIcon = ({
 
         <g id="SVGRepo_iconCarrier">
           <polygon
-            fill-rule="evenodd"
+            fillRule="evenodd"
             points="27.066,1 7,21.068 26.568,40.637 31.502,35.704 16.865,21.068 32,5.933 "
           />
         </g>

@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { patientDto } from "../types/interface";
 import ImageModel from "../components/patients/imageModel";
 import { usePrint } from "../utils/print";
-import { BackIcon } from "../../public/images/BackIcon";
+import { BackIcon } from "../utils/Icons/BackIcon";
 
 const title = "Radiology";
 

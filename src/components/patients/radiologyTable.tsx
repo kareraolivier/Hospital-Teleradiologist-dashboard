@@ -151,7 +151,7 @@ export default function RadiologyTable({
                     onClick={() => onPageChange(index + 1)}
                     className={`w-full border-y bg-white px-4 py-2 text-base ${
                       currentPage === index + 1
-                        ? "text-indigo-500 hover:bg-gray-100"
+                        ? "font-bold text-green-600 hover:bg-gray-100"
                         : "text-gray-600 hover:bg-gray-100"
                     }`}
                   >
