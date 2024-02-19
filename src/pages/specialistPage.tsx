@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import SpecialistTable from "../components/patients/specialistTable";
 import { getRadiologyPatient } from "../components/api";
+
 const title = "Specialist";
+
 export default function SpecialistPage() {
   const [patients, setPatients] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);

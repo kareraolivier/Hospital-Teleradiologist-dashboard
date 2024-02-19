@@ -37,7 +37,7 @@ export interface userDto {
   email: string;
   password: string;
   role: Role;
-  isActive: boolean;
+  isActive?: boolean;
   createdAt?: string;
 }
 export interface patientCount {
