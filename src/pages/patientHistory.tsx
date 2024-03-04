@@ -47,7 +47,7 @@ const PatientHistory = () => {
     return (
         <div className="mt-4">
             <div className="mb-5 flex items-center justify-between font-medium text-gray-700 md:pr-20">
-                <p className="text-2xl">{name}'medical history</p>
+                <p className="text-2xl">{name}'s medical history</p>
                 <input
                     type="text"
                     name="search"
