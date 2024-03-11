@@ -1,0 +1,30 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "9-navbr",
+    "ft/add-login-attempt-table",
+    "ft/add-user-name",
+    "ft/updates-version",
+    "ft/veersion-two",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "9-navbr": "main",
+    "ft/add-login-attempt-table": "main",
+    "ft/add-user-name": "main",
+    "ft/updates-version": "main",
+    "ft/veersion-two": "main",
+    "main": null,
+    "origin": "main"
+  },
+  "order": [
+    "main",
+    "9-navbr",
+    "ft/add-login-attempt-table",
+    "ft/add-user-name",
+    "ft/updates-version",
+    "ft/veersion-two",
+    "origin"
+  ]
+}

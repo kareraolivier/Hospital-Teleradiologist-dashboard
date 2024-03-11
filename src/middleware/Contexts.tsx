@@ -12,13 +12,13 @@ interface AuthContextType {
   logout: () => void;
 }
 
-export const AuthContext = createContext<AuthContextType | undefined>(
-  undefined
-);
-
 interface AuthProviderProps {
   children: ReactNode;
 }
+
+export const AuthContext = createContext<AuthContextType | undefined>(
+  undefined
+);
 
 export function AuthProvider({ children }: AuthProviderProps) {
   const [authToken, setAuthToken] = useState<string | null>(null);
@@ -33,6 +33,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
       setAuthUser(storedUser);
     }
   }, []);
+
   const logout = () => {
     setAuthToken(null);
     localStorage.removeItem("authToken");

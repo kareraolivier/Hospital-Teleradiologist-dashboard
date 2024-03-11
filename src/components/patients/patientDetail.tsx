@@ -15,20 +15,28 @@ const PatientDetail = ({
         <div className="flex justify-between">
           <div>
             <div className="flex items-center py-2">
-              <p className="mx-1 w-20 font-semibold">First name: </p>
+              <p className="mx-1 w-28 font-semibold">First name: </p>
               <p>{patient?.radiology.firstName}</p>
             </div>
             <div className="flex items-center py-2">
-              <p className="mx-1 w-20 font-semibold">Last name: </p>
+              <p className="mx-1 w-28 font-semibold">Last name: </p>
               <p>{patient?.radiology.lastName}</p>
             </div>
             <div className="flex items-center py-2">
-              <p className="mx-1 w-20 font-semibold">Email:</p>{" "}
+              <p className="mx-1 w-28 font-semibold">Email:</p>{" "}
               <p>{patient?.radiology.email}</p>
             </div>
             <div className="flex items-center py-2">
-              <p className="mx-1 w-20 font-semibold">Age: </p>
+              <p className="mx-1 w-28 font-semibold">Age: </p>
               <p>{patient?.radiology.age}</p>
+            </div>
+            <div className="flex items-center py-2">
+              <p className="mx-1 w-28 font-semibold">Requested by: </p>
+              <p>{patient?.patient.userName}</p>
+            </div>
+            <div className="flex items-center py-2">
+              <p className="mx-1 w-28 font-semibold">Checked by: </p>
+              <p>{patient?.patient.specialistName}</p>
             </div>
           </div>
           <div className="h-[12rem]">

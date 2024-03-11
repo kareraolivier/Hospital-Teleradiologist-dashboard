@@ -17,6 +17,8 @@ export interface patientDto {
   userId: string;
   status: Status;
   desc?: string;
+  userName: string;
+  specialistName: string;
   comment?: string;
   createdAt?: string;
 }
@@ -48,6 +50,7 @@ export interface userDto {
   email: string;
   password: string;
   role: Role;
+  patientCount: number;
   isActive?: boolean;
   createdAt?: string;
 }
