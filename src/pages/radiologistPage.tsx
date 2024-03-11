@@ -10,14 +10,18 @@ export default function RadiologistPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [search, setSearch] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   //open and close comment model
   const toggleModel = () => setIsOpen((prev) => !prev);
 
   const getPatient = (keyword = "", page = 1) => {
+    setIsLoading(true)
     getRadiologyPatient(keyword, page).then((res) => {
       setPatients(res.data);
       setTotalPages(res.totalPages);
+    }).finally(() => {
+      setIsLoading(false);
     });
   };
   useEffect(() => {
@@ -52,6 +56,7 @@ export default function RadiologistPage() {
             currentPage={currentPage}
             totalPages={totalPages}
             onPageChange={handlePageChange}
+            isLoading={isLoading}
           />
         </div>
         {isOpen && (

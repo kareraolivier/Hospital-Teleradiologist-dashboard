@@ -8,12 +8,16 @@ export default function SpecialistPage() {
   const [patients, setPatients] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
   const [search, setSearch] = useState("");
 
   const getPatient = (keyword = "", page = 1) => {
+    setIsLoading(true);
     getRadiologyPatient(keyword, page).then((res) => {
       setPatients(res.data);
       setTotalPages(res.totalPages);
+    }).finally(() => {
+      setIsLoading(false);
     });
   };
   useEffect(() => {
@@ -42,6 +46,7 @@ export default function SpecialistPage() {
           currentPage={currentPage}
           totalPages={totalPages}
           onPageChange={handlePageChange}
+          isLoading={isLoading}
         />
       </div>
     </div>

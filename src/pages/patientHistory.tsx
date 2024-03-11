@@ -21,11 +21,13 @@ const PatientHistory = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [search, setSearch] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
     const { id } = useParams();
     //open and close comment model
     const toggleModel = () => setIsOpen((prev) => !prev);
 
     const getPatient = useCallback((keyword = "", page = 1) => {
+        setIsLoading(true)
         if (id)
             getPatientHistory(id, keyword, page)
                 .then((res) => {
@@ -34,7 +36,10 @@ const PatientHistory = () => {
                 })
                 .catch((error) => {
                     console.error("Error fetching patient data:", error);
+                }).finally(() => {
+                    setIsLoading(false);
                 });
+
 
     }, [id]);
     useEffect(() => {
@@ -70,6 +75,7 @@ const PatientHistory = () => {
                         currentPage={currentPage}
                         totalPages={totalPages}
                         onPageChange={handlePageChange}
+                        isLoading={isLoading}
                     />
                 </div>
                 {isOpen && (

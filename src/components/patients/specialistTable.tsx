@@ -1,5 +1,15 @@
 import { Link } from "react-router-dom";
 import { radiologyDto } from "../../types/interface";
+import { TableSkeleton } from "../tableSkeleton";
+
+
+interface Props {
+  patients: radiologyDto[];
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+  isLoading: boolean
+}
 
 
 export default function SpecialistTable({
@@ -7,14 +17,10 @@ export default function SpecialistTable({
   currentPage,
   totalPages,
   onPageChange,
-}: {
-  patients: radiologyDto[];
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-}) {
+  isLoading
+}: Props) {
 
-  return (
+  return isLoading ? <TableSkeleton /> : (
     <div className="container border">
       <div className="py-8">
         <div className="py-4">

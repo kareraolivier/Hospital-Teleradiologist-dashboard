@@ -3,18 +3,23 @@ import { patientDto } from "../../types/interface";
 import { Role, Status } from "../../types/enum";
 import { capitalizeSting } from "../../utils/helper";
 import { useAuth } from "../../middleware/Contexts";
+import { TableSkeleton } from "../tableSkeleton";
+
+interface props {
+    patients: patientDto[];
+    currentPage: number;
+    totalPages: number;
+    onPageChange: (page: number) => void;
+    isLoading: boolean
+}
 
 export default function PatientTable({
     patients,
     currentPage,
     totalPages,
     onPageChange,
-}: {
-    patients: patientDto[];
-    currentPage: number;
-    totalPages: number;
-    onPageChange: (page: number) => void;
-}) {
+    isLoading
+}: props) {
 
 
     const { authUser } = useAuth();
@@ -34,7 +39,7 @@ export default function PatientTable({
                 return "bg-gray";
         }
     }
-    return (
+    return isLoading ? <TableSkeleton /> : (
         <div className="container border">
             <div className="py-8">
                 <div className="py-4">

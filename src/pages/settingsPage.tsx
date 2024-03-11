@@ -7,10 +7,14 @@ import { getUsers, stopUser } from "../components/api";
 export default function SettingsPage() {
   const [users, setUsers] = useState<userDto[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchUsers = () => {
+    setIsLoading(true);
     getUsers().then((res) => {
       setUsers(res);
+    }).finally(() => {
+      setIsLoading(false);
     });
   };
 
@@ -36,7 +40,7 @@ export default function SettingsPage() {
       </div>
       <div className="flex">
         <div className={`flex ${isOpen ? "w-3/5" : "w-full"}`}>
-          <UserTable users={users} getUserId={stopLoginUser} />
+          <UserTable users={users} getUserId={stopLoginUser} isLoading={isLoading} />
         </div>
         {isOpen && (
           <div className="flex w-2/5 justify-center pt-10">
