@@ -1,17 +1,22 @@
-import { patientDto } from "../../types/interface";
+import { radiologyDto } from "../../types/interface";
+import { TableSkeleton } from "../tableSkeleton";
+
+interface Props {
+  patients: radiologyDto[];
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+  isLoading: boolean
+}
 
 const ReportTable = ({
   patients,
   currentPage,
   totalPages,
   onPageChange,
-}: {
-  patients: patientDto[];
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-}) => {
-  return (
+  isLoading
+}: Props) => {
+  return isLoading ? <TableSkeleton /> : (
     <div className="container border">
       <div className="py-8">
         <div className="py-4">
@@ -92,11 +97,10 @@ const ReportTable = ({
                     key={index + 1}
                     type="button"
                     onClick={() => onPageChange(index + 1)}
-                    className={`w-full border-y bg-white px-4 py-2 text-base ${
-                      currentPage === index + 1
-                        ? "text-indigo-500 hover:bg-gray-100"
-                        : "text-gray-600 hover:bg-gray-100"
-                    }`}
+                    className={`w-full border-y bg-white px-4 py-2 text-base ${currentPage === index + 1
+                      ? "text-indigo-500 hover:bg-gray-100"
+                      : "text-gray-600 hover:bg-gray-100"
+                      }`}
                   >
                     {index + 1}
                   </button>

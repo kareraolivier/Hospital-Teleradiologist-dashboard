@@ -50,6 +50,7 @@ export interface userDto {
   email: string;
   password: string;
   role: Role;
+  patientCount: number;
   isActive?: boolean;
   createdAt?: string;
 }
