@@ -19,6 +19,7 @@ import "react-toastify/ReactToastify.min.css";
 import RadiologyPatientDetailPage from "./pages/radiologyPatientDetailPage";
 import { ToastContainer } from "react-toastify";
 import PatientHistory from "./pages/patientHistory";
+import AttemptsPage from "./pages/attemptsPage";
 
 function App() {
   const { authToken } = useAuth();
@@ -35,16 +36,14 @@ function App() {
               element={<RadiologyPatientDetailPage />}
             />
             <Route path="reports" element={<ReportsPage />} />
-            <Route path="Settings" element={<SettingsPage />} />
+            <Route path="attempts" element={<AttemptsPage />} />
+            <Route path="settings" element={<SettingsPage />} />
             <Route path="specialist" element={<SpecialistPage />} />
             <Route
               path="specialist/:id"
               element={<SpecialistPatientDetailPage />}
             />
-            <Route
-              path="patient/:id"
-              element={<PatientHistory />}
-            />
+            <Route path="patient/:id" element={<PatientHistory />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
         ) : (

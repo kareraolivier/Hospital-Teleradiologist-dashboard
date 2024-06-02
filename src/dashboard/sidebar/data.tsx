@@ -39,6 +39,13 @@ export const data = [
       },
       {
         id: 5,
+        title: "Attempts",
+        icon: <SettingsIcon />,
+        link: "attempts",
+        role: ["admin"],
+      },
+      {
+        id: 6,
         title: "Settings",
         icon: <SettingsIcon />,
         link: "settings",
