@@ -44,9 +44,7 @@ const AttemptsTable = ({ attempts, isLoading }: any) => {
                     <td className="border-b border-gray-200 p-5 text-sm">
                       <div className="flex items-center">
                         <div className="ml-3">
-                          <p className="whitespace-nowrap">
-                            {`${attempt.user} ${attempt.user}`}
-                          </p>
+                          <p className="whitespace-nowrap">{attempt.name}</p>
                         </div>
                       </div>
                     </td>
@@ -55,7 +53,7 @@ const AttemptsTable = ({ attempts, isLoading }: any) => {
                     </td>
                     <td className="border-b border-gray-200 p-5 text-sm">
                       <p
-                        className={`whitespace-nowrap rounded-lg text-center font-bold ${
+                        className={`mx-auto w-fit whitespace-nowrap rounded-lg px-3 text-center font-bold ${
                           attempt.successful
                             ? "bg-green-200 text-green-700"
                             : "bg-red-200 text-red-700"

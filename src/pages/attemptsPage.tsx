@@ -8,7 +8,7 @@ const AttemptsPage = () => {
   const fetchAttempts = () => {
     setIsLoading(true);
     getAttempts()
-      .then((res) => {
+      .then((res: any) => {
         setAttempts(res);
       })
       .finally(() => {
