@@ -3,6 +3,7 @@ import { ReportIcon } from "./icons/ReportIcon";
 import { SettingsIcon } from "./icons/SettingsIcon";
 import { Sicon } from "./icons/Sicon";
 import { Ricon } from "./icons/Ricon";
+import LoginAttempt from "./icons/loginAttempt";
 
 export const data = [
   {
@@ -39,6 +40,13 @@ export const data = [
       },
       {
         id: 5,
+        title: "Attempts",
+        icon: <LoginAttempt />,
+        link: "attempts",
+        role: ["admin"],
+      },
+      {
+        id: 6,
         title: "Settings",
         icon: <SettingsIcon />,
         link: "settings",
